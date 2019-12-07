@@ -100,7 +100,9 @@ endif
 
 # Prebuilt Packages
 PRODUCT_PACKAGES += \
-    SoundPickerPrebuilt
+    SoundPickerPrebuilt \
+    CalendarGooglePrebuilt \
+    CalculatorGooglePrebuilt
 
 # Inherit from audio config
 $(call inherit-product, vendor/keepQASSA/config/audio.mk)
