@@ -14,18 +14,6 @@
 
 LOCAL_PATH := vendor/keepQASSA
 
-# Prebuilt Packages
-PRODUCT_PACKAGES += \
-    NexusLauncherRelease \
-    NexusWallpapersStubPrebuilt2019Static \
-    PixelThemesStub2019 \
-    SettingsIntelligenceGooglePrebuilt
-
-ifeq ($(TARGET_GAPPS_ARCH),arm64)
-PRODUCT_PACKAGES += \
-    MatchmakerPrebuiltPixel4
-endif
-
 # Offline charger
 PRODUCT_PACKAGES += \
     charger_res_images \
