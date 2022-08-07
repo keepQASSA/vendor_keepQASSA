@@ -59,4 +59,4 @@ PRODUCT_PACKAGES += \
     FontRubikRubikOverlay
 
 PRODUCT_COPY_FILES += \
-    vendor/pixelstyle/fonts/fonts_customization.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/fonts_customization.xml
+    vendor/keepQASSA/fonts/fonts_customization.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/fonts_customization.xml
