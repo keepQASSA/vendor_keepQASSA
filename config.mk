@@ -16,9 +16,6 @@ LOCAL_PATH := vendor/keepQASSA
 
 # Prebuilt Packages
 PRODUCT_PACKAGES += \
-    NexusLauncherRelease \
-    NexusWallpapersStubPrebuilt2019Static \
-    PixelThemesStub2019 \
     SettingsIntelligenceGooglePrebuilt
 
 ifeq ($(TARGET_GAPPS_ARCH),arm64)
@@ -91,9 +88,23 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.error.receiver.system.apps=com.google.android.gms \
     ro.atrace.core.services=com.google.android.gms,com.google.android.gms.ui,com.google.android.gms.persistent
 
-# Include product overlays
+# GApps
+ifeq ($(WITH_GAPPS),true)
+# Prebuilt Packages
+PRODUCT_PACKAGES += \
+    NexusLauncherRelease \
+    NexusWallpapersStubPrebuilt2019Static \
+    PixelThemesStub2019 \
+    SettingsIntelligenceGooglePrebuilt
+
+# Include product overlays for Pixel.
 PRODUCT_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay
+    $(LOCAL_PATH)/overlay-pixel
+else
+# Include product overlays for Shady Launcher.
+PRODUCT_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay-launcher3
+endif
 
 # Inherit from audio config
 $(call inherit-product, vendor/keepQASSA/config/audio.mk)
