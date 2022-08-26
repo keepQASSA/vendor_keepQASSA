@@ -89,13 +89,13 @@ PRODUCT_PACKAGES += \
     PixelThemesStub2019 \
     SettingsIntelligenceGooglePrebuilt
 
-# Include product overlays for Pixel.
+# Include product overlays for GApps variant.
 PRODUCT_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-pixel
 else
-# Include product overlays for Shady Launcher.
+# Include product overlays for Vanilla variant.
 PRODUCT_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-launcher3
+    $(LOCAL_PATH)/overlay-vanilla
 endif
 
 # Inherit from audio config
