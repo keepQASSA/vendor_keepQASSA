@@ -98,6 +98,10 @@ PRODUCT_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-vanilla
 endif
 
+# Prebuilt Packages
+PRODUCT_PACKAGES += \
+    SoundPickerPrebuilt
+
 # Inherit from audio config
 $(call inherit-product, vendor/keepQASSA/config/audio.mk)
 
