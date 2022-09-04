@@ -244,7 +244,7 @@
     <!-- Wallpaper cropper package. Used as the default cropper if the active launcher doesn't
          handle wallpaper cropping.
     -->
-    <string name="config_wallpaperCropperPackage">com.google.android.apps.wallpaper</string>
+    <string name="config_wallpaperCropperPackage">com.android.apps.wallpaper</string>
 
     <!-- Enable the RingtonePickerActivity in 'com.android.providers.media'. -->
     <bool name="config_defaultRingtonePickerEnabled">false</bool>
