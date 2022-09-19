@@ -96,7 +96,6 @@ endif
 # Prebuilt Packages
 PRODUCT_PACKAGES += \
     SoundPickerPrebuilt \
-    CalendarGooglePrebuilt \
     CalculatorGooglePrebuilt
 
 # Inherit from audio config
