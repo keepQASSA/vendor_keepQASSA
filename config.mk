@@ -98,3 +98,21 @@ $(call inherit-product, vendor/keepQASSA/config/audio.mk)
 
 # Inherit from fonts config
 $(call inherit-product, vendor/keepQASSA/config/fonts.mk)
+
+# Lawnchair
+ifneq ($(TARGET_LAWNCHAIR_OPTOUT),true)
+
+PRODUCT_PACKAGES += \
+    Lawnchair-1.2.0.1884
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/overlay-lawnchair/configs/permissions/privapp-permissions-lawnchair.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-lawnchair.xml \
+    $(LOCAL_PATH)/overlay-lawnchair/configs/permissions/lawnchair-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml
+
+PRODUCT_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay/lawnchair
+
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
+    $(LOCAL_PATH)/overlay-lawnchair
+
+endif
