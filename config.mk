@@ -30,9 +30,9 @@ else
     PRODUCT_COPY_FILES += $(LOCAL_PATH)/bootanimation/bootanimation_1080.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
 endif
 
-# Gestures
+# Overlays
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.boot.vendor.overlay.theme=com.android.internal.systemui.navbar.gestural
+    ro.boot.vendor.overlay.theme=com.android.internal.systemui.navbar.gestural;com.gnonymous.gvisualmod.urm_l
 
 # Gboard configuration
 PRODUCT_PRODUCT_PROPERTIES += \
