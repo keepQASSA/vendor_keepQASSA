@@ -70,6 +70,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.error.receiver.system.apps=com.google.android.gms \
     ro.atrace.core.services=com.google.android.gms,com.google.android.gms.ui,com.google.android.gms.persistent
 
+# Include product overlays for all variant
+PRODUCT_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay
+
 # GApps
 ifeq ($(WITH_GAPPS),true)
 # Prebuilt Packages
@@ -83,10 +87,6 @@ PRODUCT_PACKAGES += \
 # Include product overlays for GApps variant.
 PRODUCT_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-pixel
-else
-# Include product overlays for Vanilla variant.
-PRODUCT_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay-vanilla
 endif
 
 # Prebuilt Packages
